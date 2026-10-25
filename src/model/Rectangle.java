@@ -1,0 +1,27 @@
+package model;
+
+public class Rectangle extends Shape {
+    private double width, height;
+
+    public Rectangle(String color, double width, double height) {
+        super(color);
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double calcArea() {
+        return width * height;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Малюємо прямокутник " + width + "x" + height + ", колір: " + shapeColor);
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle[color=" + shapeColor + ", width=" + width + ", height=" + height
+                + ", area=" + String.format("%.2f", calcArea()) + "]";
+    }
+}
